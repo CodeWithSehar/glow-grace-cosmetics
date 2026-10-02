@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Glow &amp; Grace Cosmetics - makeup, skincare, haircare, fragrances and lip products. Order easily on WhatsApp.">
+  <title>Glow &amp; Grace Cosmetics | Beauty Shop</title>
+
+  <!-- Small icon shown in the browser tab -->
+  <link rel="icon" href="images/products/glowgracecosmetics.jpg">
+
+  <!-- Link to the stylesheet (style.css must be in the same folder as index.html) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       1. HEADER
+       Contains the shop name, main navigation and a mobile menu button
+       ===================================================== -->
+  <header class="site-header" id="home-top">
+    <div class="container header__inner">
+
+      <!-- Shop logo / name -->
+      <a href="#home" class="logo" aria-label="Glow &amp; Grace Cosmetics - Home">
+        <img class="logo__image" src="images/products/glowgracecosmetics.jpg" alt="" width="48" height="48">
+        <span class="logo__text">Glow &amp; Grace</span>
+      </a>
+
+      <!-- Mobile menu button (script.js shows/hides the menu) -->
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+
+      <!-- Main navigation -->
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link" href="#home">Home</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#products">Products</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#about">About</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- =====================================================
+         2. HERO SECTION
+         The first thing visitors see
+         ===================================================== -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="container hero__inner">
+
+        <div class="hero__content">
+          <h1 class="hero__title" id="hero-heading">Beauty that feels like you</h1>
+          <p class="hero__text">
+            Discover trusted makeup, skincare, haircare and fragrances at your
+            local cosmetics shop. Choose your favourites and order in minutes on WhatsApp.
+          </p>
+          <a href="#products" class="button button--primary">Shop Now</a>
+        </div>
+
+        <div class="hero__media">
+          <!-- Demo picture. To use a real photo, change the src to images/your-photo.jpg -->
+           <img class="hero__image" src="images/products/hero.webp" alt="Selection of cosmetics products on display" width="600" height="750">
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         3. CATEGORIES SECTION
+         Each category links to the products section for now
+         ===================================================== -->
+    <section class="categories" id="categories" aria-labelledby="categories-heading">
+      <div class="container">
+
+        <header class="section-header">
+          <h2 class="section-title" id="categories-heading">Shop by Category</h2>
+          <p class="section-subtitle">Find exactly what you need.</p>
+        </header>
+
+        <ul class="categories__list">
+
+          <li class="category-card" data-category="makeup">
+            <a class="category-card__link" href="#products">
+              <img class="category-card__image" src="images/products/makeup.webp" alt="" width="200" height="200">
+              <h3 class="category-card__name">Makeup</h3>
+            </a>
+          </li>
+
+          <li class="category-card" data-category="skincare">
+            <a class="category-card__link" href="#products">
+              <img class="category-card__image" src="images/products/skincare.webp" alt="" width="200" height="200">
+              <h3 class="category-card__name">Skincare</h3>
+            </a>
+          </li>
+
+          <li class="category-card" data-category="haircare">
+            <a class="category-card__link" href="#products">
+              <img class="category-card__image" src="images/products/haircare.webp" alt="" width="200" height="200">
+              <h3 class="category-card__name">Haircare</h3>
+            </a>
+          </li>
+
+          <li class="category-card" data-category="fragrances">
+            <a class="category-card__link" href="#products">
+              <img class="category-card__image" src="images/products/fragrances.webp" alt="" width="200" height="200">
+              <h3 class="category-card__name">Fragrances</h3>
+            </a>
+          </li>
+
+          <li class="category-card" data-category="lip-products">
+            <a class="category-card__link" href="#products">
+              <img class="category-card__image" src="images/products/lipproducts.webp" alt="" width="200" height="200">
+              <h3 class="category-card__name">Lip Products</h3>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         4. PRODUCTS SECTION
+         The product cards are NOT written here by hand.
+         They are built by script.js from the list in products.js
+         ===================================================== -->
+    <section class="products" id="products" aria-labelledby="products-heading">
+      <div class="container">
+
+        <header class="section-header">
+          <h2 class="section-title" id="products-heading">Our Products</h2>
+          <p class="section-subtitle">Pick your quantity and order directly on WhatsApp.</p>
+        </header>
+
+        <!-- Product cards are created automatically by script.js
+             using the product list in products.js.
+             To add, edit or remove products, change products.js only. -->
+        <div class="products__grid" id="product-list">
+          <noscript>Please turn on JavaScript to see our products.</noscript>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         5. ABOUT SECTION
+         ===================================================== -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container about__inner">
+
+        <div class="about__media">
+          <img class="about__image" src="images/products/ourshop.webp" alt="Inside Glow &amp; Grace Cosmetics shop" width="500" height="400" loading="lazy">
+        </div>
+
+        <div class="about__content">
+          <h2 class="section-title" id="about-heading">About Our Shop</h2>
+          <p class="about__text">
+            Glow &amp; Grace Cosmetics is a local beauty shop serving our community
+            with genuine, carefully selected products. Our goal is to help you find
+            the right products for your skin, hair and style, with friendly advice
+            and fair prices.
+          </p>
+
+          <!-- Space for shop information: edit these items as needed -->
+          <ul class="about__info">
+            <li class="about__info-item"><strong>Established:</strong> [Year]</li>
+            <li class="about__info-item"><strong>Owner:</strong> [Owner name]</li>
+            <li class="about__info-item"><strong>Our promise:</strong> 100% original products</li>
+            <li class="about__info-item"><strong>Delivery:</strong> [Delivery details]</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         6. CONTACT SECTION
+         ===================================================== -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <header class="section-header">
+          <h2 class="section-title" id="contact-heading">Contact &amp; Visit Us</h2>
+          <p class="section-subtitle">We would love to hear from you.</p>
+        </header>
+
+        <div class="contact__grid">
+
+          <!-- Contact details -->
+          <div class="contact__details">
+
+            <div class="contact__item">
+              <h3 class="contact__label">Shop Phone</h3>
+              <a class="contact__link" href="tel:+923434113012" data-shop-number="phone">+92&nbsp;343&nbsp;4113012</a>
+            </div>
+
+            <div class="contact__item">
+              <h3 class="contact__label">WhatsApp</h3>
+              <a class="contact__link" href="https://wa.me/923434113012" target="_blank" rel="noopener" data-shop-number="whatsapp">+92&nbsp;343&nbsp;4113012</a>
+            </div>
+
+            <div class="contact__item">
+              <h3 class="contact__label">Address</h3>
+              <address class="contact__text">
+                [Shop number / Street], [Area], [City], Punjab, Pakistan
+              </address>
+            </div>
+
+            <div class="contact__item">
+              <h3 class="contact__label">Opening Hours</h3>
+              <ul class="contact__hours">
+                <li>Monday – Saturday: 10:00 AM – 9:00 PM</li>
+                <li>Sunday: 12:00 PM – 8:00 PM</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Space for Google Maps:
+               Open Google Maps > search your shop > Share > Embed a map > copy the iframe code
+               and paste it inside this container, replacing the placeholder. -->
+          <div class="contact__map">
+            <div class="map-placeholder">
+              <p>Google Maps location will go here.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       7. FOOTER
+       ===================================================== -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+
+      <!-- Shop name -->
+      <div class="footer__brand">
+        <h2 class="footer__title">Glow &amp; Grace</h2>
+        <p class="footer__tagline">Your local destination for beauty essentials.</p>
+      </div>
+
+      <!-- Quick links -->
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <h3 class="footer__heading">Quick Links</h3>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#home">Home</a></li>
+          <li><a class="footer__link" href="#products">Products</a></li>
+          <li><a class="footer__link" href="#about">About</a></li>
+          <li><a class="footer__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contact information -->
+      <div class="footer__contact">
+        <h3 class="footer__heading">Get in Touch</h3>
+        <ul class="footer__list">
+          <li>WhatsApp: <a class="footer__link" href="https://wa.me/923434113012" target="_blank" rel="noopener" data-shop-number="whatsapp">+92&nbsp;343&nbsp;4113012</a></li>
+          <li>Phone: <a class="footer__link" href="tel:+923434113012" data-shop-number="phone">+92&nbsp;343&nbsp;4113012</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2026 Glow &amp; Grace Cosmetics. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript files (keep them in the same folder as index.html).
+       products.js must come BEFORE script.js -->
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
